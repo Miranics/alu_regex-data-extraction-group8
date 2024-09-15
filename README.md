@@ -1,9 +1,6 @@
 # Regex Data Extraction Project
 This project is part of the Regex Onboarding Hackathon and is aimed at demonstrating the use of Regular Expressions (Regex) to extract specific data types from unstructured text. The project handles various formats including email addresses, URLs, phone numbers, credit card numbers, and more, all through the power of Regex.
-
                    ![download (1)](https://github.com/user-attachments/assets/e49e97fc-514f-4571-b513-7e6191144073)
-
-
 
 # Overview
 In this project, we have implemented a series of Python scripts that extract important pieces of data from raw text. Whether it's web-scraped content or API responses, the scripts utilize regular expressions to efficiently find and extract the following data types:

@@ -1,4 +1,4 @@
-Regex Data Extraction Project
+##Regex Data Extraction Project
 This project is part of the Regex Onboarding Hackathon and is aimed at demonstrating the use of Regular Expressions (Regex) to extract specific data types from unstructured text. The project handles various formats including email addresses, URLs, phone numbers, credit card numbers, and more, all through the power of Regex.
 ![download (1)](https://github.com/user-attachments/assets/e49e97fc-514f-4571-b513-7e6191144073)
 
@@ -51,27 +51,18 @@ The system can identify common credit card formats like:
 1234 5678 9012 3456
 1234-5678-9012-3456
 Currency Amount Extraction
-Regular expressions capture different formats of currency:
+## Regular expressions capture different formats of currency:
 
 $19.99
 $1,234.56
 How It Works
 The process starts by feeding a large string or webpage data into the program. The text is parsed, and each type of information (e.g., emails, phone numbers) is extracted using specialized regular expressions. The extracted data can then be stored, displayed, or processed further.
 
-Example Code for Email Extraction:
-python
-Copy code
-import re
-
-def extract_emails(text):
-    email_pattern = r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
-    emails = re.findall(email_pattern, text)
-    return emails
 
 # Example usage
 sample_text = "Contact us at support@example.com or sales@company.co.uk."
 emails = extract_emails(sample_text)
 print("Extracted Emails:", emails)
-Conclusion
+# Conclusion
 This project showcases the effectiveness of regular expressions in extracting valuable information from vast, unstructured text sources. By utilizing Python and Regex, the team has built a robust solution for processing and extracting multiple types of data, essential for web scraping and data analysis tasks.
 

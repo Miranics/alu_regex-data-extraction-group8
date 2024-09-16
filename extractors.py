@@ -2,28 +2,35 @@ import re
 
 def extract_emails(text):
     """
-    Extracts email addresses from the given text using a regular expression.
-    
-    :param text: The input text containing email addresses
-    :return: A list of unique, valid email addresses found in the text
+    Extracts email addresses from the given text or list of text strings using a regular expression.
     """
     email_pattern = r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
     emails = re.findall(email_pattern, text)
 
-    # Remove duplicates
-    unique_emails = list(set(emails))
+    return list(set(emails))  # Remove duplicates
 
-    valid_emails = [email for email in unique_emails if re.search(r'@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}', email)]
-
-    return valid_emails
-
-# Example usage
-if __name__ == "__main__":
-    sample_text = """
-    Contact us at support@example.com or marketing@example.com. For more info, email miracle.nanen@company.co.uk.
-    Or send your CV to hr@nonexistent..com or hr@fake@domain.com
+def process_emails():
     """
+    Prompts the user for input and extracts email addresses from the provided text.
+    """
+    try:
+        text = input("Please enter the text for email extraction:\n")
+        
+        if not text.strip():
+            print("No text provided. Exiting.")
+            return
+        
+        extracted_emails = extract_emails(text)
+        
+        if extracted_emails:
+            print("\nExtracted Emails:")
+            for email in extracted_emails:
+                print(f"- {email}")
+        else:
+            print("No valid email addresses found.")
     
-    # Extract emails
-    extracted_emails = extract_emails(sample_text)
-    print("Extracted Emails:", extracted_emails)
+    except Exception as e:
+        print(f"Error: {str(e)}")
+
+if __name__ == "__main__":
+    process_emails()

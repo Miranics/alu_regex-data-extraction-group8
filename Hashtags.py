@@ -2,7 +2,7 @@ import re
 
 def main():
   
-    text_input = input("Enter your text string:\n")
+    text_input = input(" please Enter your text string:\n")
 
    
     hashtag_pattern = r'#\w+'
@@ -12,11 +12,11 @@ def main():
     
     
     if matches:
-        print("Extracted Hashtags:")
+        print("Hashtags extracted:")
         for match in matches:
             print(match)
     else:
-        print("No hashtags found.")
+        print("Sorry! No hashtags found.")
         
 
     

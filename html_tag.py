@@ -26,7 +26,7 @@ def is_valid_html_tag(tag):
 
 def main():
    
-    html_string = input("Enter your HTML string:\n")
+    html_string = input("Please Enter your HTML string:\n")
 
     
     html_tag_pattern = r'<[^>]+>'
@@ -35,11 +35,11 @@ def main():
     matches = re.findall(html_tag_pattern, html_string)
     
     if matches:
-        print("valid html tag:")
+        print(" You got it!...valid html tag:")
         for match in matches:
             print(match)
     else:
-        print("invalid html tag.")
+        print("Oh No!... invalid html tag.")
         
 while True:
     

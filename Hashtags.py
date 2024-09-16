@@ -2,7 +2,7 @@ import re
 
 def main():
   
-    text_input = input("Enter your text string:\n")
+    text_input = input(" please Enter your text string:\n")
 
    
     hashtag_pattern = r'#\w+'

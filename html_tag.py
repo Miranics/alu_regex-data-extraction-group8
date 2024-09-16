@@ -34,11 +34,20 @@ def main():
    
     matches = re.findall(html_tag_pattern, html_string)
     
-    for match in matches:
-        if is_valid_html_tag(match):
-            print(f"{match} - Valid HTML Tag")
-        else:
-            print(f"{match} - Invalid HTML Tag")
+    if matches:
+        print("valid html tag:")
+        for match in matches:
+            print(match)
+    else:
+        print("invalid html tag.")
+        
+while True:
+    
+    html_str = input("Enter an html tag (or type 'exit' to quit): ").strip()
+    
+    
+    if html_str.lower() == 'exit':
+        break
 
 if __name__ == "__main__":
     main()

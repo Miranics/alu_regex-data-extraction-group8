@@ -26,7 +26,7 @@ def is_valid_html_tag(tag):
 
 def main():
    
-    html_string = input("Enter your HTML string:\n")
+    html_string = input("Please Enter your HTML string:\n")
 
     
     html_tag_pattern = r'<[^>]+>'

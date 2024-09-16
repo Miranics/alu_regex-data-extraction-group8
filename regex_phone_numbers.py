@@ -25,6 +25,3 @@ while True:
         print(f"Phone number {user_input} found in the text!")
     else:
         print(f"Phone number {user_input} not found in the text.")
-    
-    # Display all extracted phone numbers
-    print("Extracted phone numbers:", phone_numbers)

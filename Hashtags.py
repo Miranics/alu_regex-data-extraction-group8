@@ -12,7 +12,7 @@ def main():
     
     
     if matches:
-        print("Extracted Hashtags:")
+        print("Hashtags extracted:")
         for match in matches:
             print(match)
     else:

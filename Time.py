@@ -39,7 +39,7 @@ def identify_time_format(time_str):
 # Main loop to take input from the terminal
 while True:
     # Prompt the user for input
-    time_str = input("Enter a time (or type 'exit' to quit): ").strip()
+    time_str = input("Enter a time-format (or type 'exit' to quit): ").strip()
     
     # Exit condition
     if time_str.lower() == 'exit':

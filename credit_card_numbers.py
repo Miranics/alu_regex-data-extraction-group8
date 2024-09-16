@@ -5,7 +5,7 @@ credit_card_pattern = r'\b(?:\d{4}[-\s]){3}\d{4}\b|\b\d{4}[-\s]\d{6}[-\s]\d{5}\b
 
 # Luhn's algorithm to check if a credit card number is valid
 def luhn_algorithm(card_number):
-    # Remove spaces and hyphens
+    
     card_number = card_number.replace(" ", "").replace("-", "")
     
     # Reverse the card number and apply Luhn's algorithm
@@ -17,7 +17,7 @@ def luhn_algorithm(card_number):
         # Double every second digit
         if i % 2 == 1:
             n *= 2
-            # If doubling results in a number greater than 9, subtract 9
+      
             if n > 9:
                 n -= 9
         total += n
@@ -27,18 +27,17 @@ def luhn_algorithm(card_number):
 
 # Function to check if the card has a valid prefix (Visa, MasterCard, etc.)
 def is_valid_card_prefix(card_number):
-    # Remove spaces and hyphens
     card_number = card_number.replace(" ", "").replace("-", "")
     
     # Check known prefixes
     valid_prefixes = {
-        "Visa": r'^4\d{12}(?:\d{3})?$',                             # Visa cards
-        "MasterCard": r'^5[1-5]\d{14}$',                           # MasterCard
-        "American Express": r'^3[47]\d{13}$',                      # American Express (Amex)
-        "Discover": r'^6(?:011|5\d{2})\d{12}$',                    # Discover
-        "JCB": r'^(?:2131|1800|35\d{3})\d{11}$',                   # JCB
-        "Diners Club": r'^3(?:0[0-5]|[68]\d)\d{11}$',              # Diners Club
-        "Maestro": r'^(?:5[0678]\d{2}|6304|6390|67\d{2})\d{8,15}$' # Maestro (8-15 digits)
+        "Visa": r'^4\d{12}(?:\d{3})?$',                             
+        "MasterCard": r'^5[1-5]\d{14}$',                           
+        "American Express": r'^3[47]\d{13}$',                      
+        "Discover": r'^6(?:011|5\d{2})\d{12}$',                    
+        "JCB": r'^(?:2131|1800|35\d{3})\d{11}$',                   
+        "Diners Club": r'^3(?:0[0-5]|[68]\d)\d{11}$',              
+        "Maestro": r'^(?:5[0678]\d{2}|6304|6390|67\d{2})\d{8,15}$' 
     }
 
     # Validate the card number against the known prefixes
@@ -53,7 +52,6 @@ def find_and_validate_credit_card_numbers(text):
     valid_cards = []
     
     for card in potential_cards:
-        # Remove spaces and hyphens for validation
         normalized_card = card.replace(" ", "").replace("-", "")
         
         if luhn_algorithm(normalized_card):

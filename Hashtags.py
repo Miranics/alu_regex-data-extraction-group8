@@ -16,7 +16,7 @@ def main():
         for match in matches:
             print(match)
     else:
-        print("Sorry No hashtags found.")
+        print("Sorry! No hashtags found.")
         
 
     

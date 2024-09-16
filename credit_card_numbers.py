@@ -17,7 +17,7 @@ def luhn_algorithm(card_number):
         # Double every second digit
         if i % 2 == 1:
             n *= 2
-      
+            
             if n > 9:
                 n -= 9
         total += n
